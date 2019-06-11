@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tip-Me: Tip Calculator</title>
+	<link rel="shortcut icon" type="text/css" href="tip.ico">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<header class="center-align">
+		<span class="title">TIP ME</span>
+	</header>
+	<div id="main-container" class="container l6">
+		<div class="row">
+			<div class="col s5 col1 left-align">
+				<span>TOTAL BILL</span>
+			</div>
+			<div class="col s7 col2 right-align">
+				<span>$ <input id="price_input" type="text" class="browser-default tooltipped" data-position="top" data-tooltip="Positive values only"/></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s5 col1 left-align">
+				<span>TIP (%)</span>
+			</div>
+			<div class="col s7 col2 right-align">
+				<span><input id="tip_input" type="text" class="browser-default tooltipped" data-position="top" data-tooltip="0 and positive values only"/></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s6 col1 left-align">
+				<span>NUMBER OF PEOPLE</span>
+			</div>
+			<div class="col s6 col2 right-align">
+				<span>
+					<i class="fas fa-arrow-circle-left"></i>
+					<input id="num_people" type="text" class="browser-default input-width tooltipped" value="1" data-position="top" data-tooltip="Positive values only"/>
+					<i class="fas fa-arrow-circle-right"></i>
+				</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 center-align">
+				<a class="waves-effect waves-light btn-large">CALCULATE!</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s5 col1 left-align">
+				<span>TIP PER PERSON</span>
+			</div>
+			<div class="col s7 col2 right-align">
+				<span>$ <input id="tip_per_person" disabled type="text" class="browser-default"/></span>
+			</div>
+		</div>
+	</div>
+	<div id="error-message">
+
+	</div>
+	<footer class="footer page-footer center-align">	
+		<span class="center-align">© 2019 Copyright</span>
+	</footer>
+	<div id="alertModal" class="modal">
+	    <div class="modal-content">
+	        <div class="modal-body center-align">
+	        </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+	    </div>
+	</div>
+</body>
+</html>
