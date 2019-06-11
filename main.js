@@ -142,6 +142,7 @@ let calculateTips = () => {
 	let bill = $("#price_input").val()
 	let tip = $("#tip_input").val()
 	let rtip = parseFloat(bill) * parseFloat(tip/100)
+	rtip = rtip.toFixed(2)
 	let num = $("#num_people").val()
 	let tip_per_person 
 
@@ -150,15 +151,15 @@ let calculateTips = () => {
 	if (num > 1) {
 
 		tip_per_person = parseFloat(rtip) / parseInt(num)
-		console.log(tip_per_person)
 		tip_per_person = tip_per_person.toFixed(2)
 
 	} else {
 
-		tip_per_person = rtip.toFixed(2)
+		tip_per_person = rtip
 	
 	  }
 
 	$("#tip_per_person").empty().val(tip_per_person)
+	$("#total_tip").empty().val(rtip)
 
 }
